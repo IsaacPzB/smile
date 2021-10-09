@@ -83,29 +83,73 @@
     <div class="col-lg-12 col-md-12 col-sm-12" style="align-items: center;">
       <form>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Nombres</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">Aqui ingrese su Nombres</div>
+          <label class="form-label">Nombre</label>
+          <input type="text" class="form-control" style="border-radius: 10px; width: 60%;" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+          <div class="form-text">Aqui ingrese su nombre</div>
         </div>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Apellidos</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">Aqui ingrese su Apellidos</div>
+          <label class="form-label">Apellidos</label>
+          <input type="text" class="form-control"  style="border-radius: 10px; width: 60%;" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+          <div class="form-text">Aqui ingrese sus apellidos</div>
         </div>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Tratamiento</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text"></div>
+          <label class="form-label">Tipo de documento de identidad</label>
+          <div class="input-group mb-3">
+            <select style="border-radius: 10px; width:auto;" class="custom-select" id="inputGroupSelect01">
+              <option selected>Cédula de Ciudadanía</option>
+              <option value="1">Terjeta de Identidad</option>
+              <option value="2">Cédula de Extranjería</option>
+              <option value="3">Pasaporte</option>
+              <option value="4">Tarjeta militar</option>
+            </select>
+          </div>
         </div>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Cuota Inicial</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">Debe de abonar al menos el 50% del costo del tratamiento</div>
+          <label class="form-label">Número de documento</label>
+          <input type="text" class="form-control"  style="border-radius: 10px; width: 40%;" id="ExampleNumber" aria-describedby="text">
+          <div class="form-text">Aqui ingrese su número de documento</div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Genero</label>
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="radio1" name="radio-stacked" required>
+            <label class="custom-control-label" for="Validation1">Hombre</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="radio2" name="radio-stacked" required>
+            <label class="custom-control-label" for="Validation2">Mujer</label>
+          </div>
+          <div class="custom-control custom-radio mb-3">
+            <input type="radio" class="custom-control-input" id="radio3" name="radio-stacked" required>
+            <label class="custom-control-label" for="Validation3">Alien</label>
+          </div>
         </div>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Ciudad</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">Aqui ingrese su Ciudad de Origen</div>
+          <label class="form-label">Edad</label>
+          <input type="number" class="form-control"  style="border-radius: 10px; width: 20%;" id="ExampleEdad" aria-describedby="number">
+          <div class="form-text">Aqui ingrese su Edad</div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Tratamientos</label>
+          <div class="input-group mb-3">
+            <select style="border-radius: 10px; width: auto;" class="custom-select" id="inputGroupSelect01">
+              <option disabled="true" selected>Escoger...</option>
+              <option value="1">Estetica Dental</option>
+              <option value="2">Ortodoncia</option>
+              <option value="3">Endoncia</option>
+              <option value="4">Ferula Dental</option>
+              <option value="5">Blanqueamiento Dental</option>
+              <option value="6">Carillas Bucales de Porcelana</option>
+              <option value="7">Carillas Bucales de composite</option>
+              <option value="8">Implantes Dentales</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email</label>
+          <input type="email" class="form-control"  style="border-radius: 10px; width: 50%;" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">Aqui ingrese su correo electronico</div>
         </div>
         <div class="mb-3 form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -129,10 +173,11 @@
             </li>
             <ul>
               <li>
-                <a href="html/clinica.html" style="text-decoration: none; color: aliceblue">Nuestra
+                <a href="clinica.html" style="text-decoration: none; color: aliceblue">Nuestra
                   Clinica</a>
               </li>
-              <li>Tratamiento</li>
+              <li><a href="DiseñoSonrisa.html" style="text-decoration: none; color: aliceblue">Diseño
+                  sonrisa</a></li>
               <li>Nuestros pacientes</li>
               <li>Estado financiero</li>
               <li>Politicas de tratamiento de datos</li>
@@ -146,17 +191,14 @@
               <h5><b>Tratamiento</b></h5>
             </li>
             <ul>
-              <li>
-                <a href="html/DiseñoSonrisa.html" style="text-decoration: none; color: aliceblue">Diseño
-                  sonrisa</a>
-              </li>
-              <li>Odontología General</li>
-              <li>Periodoncia</li>
-              <li>Blanqueamiento dental</li>
-              <li>Ortodoncia & ortopedia</li>
-              <li>Rehabilitación oral</li>
-              <li>Implantología</li>
-              <li>Cirugía oral y maxilofacial</li>
+              <li>Estetica Dental</li>
+              <li>Ortodoncia</li>
+              <li>Endoncia</li>
+              <li>Ferula Dental</li>
+              <li>Blanqueamiento Dental</li>
+              <li>Carillas Bucales de Porcelana</li>
+              <li>Carillas Bucales de composite</li>
+              <li>Implantes Dentales</li>
             </ul>
           </ul>
         </div>
