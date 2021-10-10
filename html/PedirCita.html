@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/../../css/bootstrap.css" />
   <link rel="shortcut icon" href="img/../../img/logo.png" />
-  <script src="../js/bootstrap.bundle.min.js"></script>
   <title>Citas</title>
 </head>
 
@@ -82,87 +81,103 @@
 
     <div class="display-4" style="text-align: center; color:#77acf1;">Ingrese Sus Datos</div>
     <div class="col-lg-12 col-md-12 col-sm-12" style="align-items: center;">
-      <form>
+      <form id="form" autocomplete="off">
         <div class="mb-3">
-          <label class="form-label">Nombre</label>
-          <input type="text" class="form-control" style="border-radius: 10px; width: 60%;" aria-label="Small"
-            aria-describedby="inputGroup-sizing-sm">
+          <label class="form-label" >Nombre</label>
+          <input type="text" id="txtNombre" class="form-control" style="border-radius: 10px; width: 60%;" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
           <div class="form-text">Aqui ingrese su nombre</div>
         </div>
         <div class="mb-3">
-          <label class="form-label">Apellidos</label>
-          <input type="text" class="form-control" style="border-radius: 10px; width: 60%;" aria-label="Small"
-            aria-describedby="inputGroup-sizing-sm">
+          <label class="form-label" >Apellidos</label>
+          <input type="text" class="form-control" id="txtApellidos"  style="border-radius: 10px; width: 60%;" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
           <div class="form-text">Aqui ingrese sus apellidos</div>
         </div>
         <div class="mb-3">
-          <label class="form-label">Tipo de documento de identidad</label>
-          <select style="border-radius: 10px; width: min-content;" class="form-select" id="inputGroupSelect01">
-            <option selected>Cédula de Ciudadanía</option>
-            <option value="1">Terjeta de Identidad</option>
-            <option value="2">Cédula de Extranjería</option>
-            <option value="3">Pasaporte</option>
-            <option value="4">Tarjeta militar</option>
-          </select>
+          <label class="form-label" >Tipo de documento de identidad</label>
+          <div class="input-group mb-3">
+            <select style="border-radius: 10px; width:auto;" class="custom-select" id="cmbTipoDocumento">
+              <option disabled selected> Seleccionar Tipo </option>
+              <option >Cédula de Ciudadanía</option>
+              <option >Terjeta de Identidad</option>
+              <option >Cédula de Extranjería</option>
+              <option >Pasaporte</option>
+              <option >Tarjeta militar</option>
+            </select>
+          </div>
         </div>
         <div class="mb-3">
-          <label class="form-label">Número de documento</label>
-          <input type="text" class="form-control" style="border-radius: 10px; width: 40%;" id="ExampleNumber"
-            aria-describedby="text">
+          <label class="form-label" >Número de documento</label>
+          <input type="text" class="form-control"  style="border-radius: 10px; width: 40%;" id="txtid" aria-describedby="text">
           <div class="form-text">Aqui ingrese su número de documento</div>
         </div>
 
         <div class="mb-3">
-          <label class="form-label">Genero</label>
+          <form id ="radiomenu" name="genero">
+          <label class="form-label" >Genero</label>
           <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="radio1" name="radio-stacked" required>
-            <label class="custom-control-label" for="Validation1">Hombre</label>
+            <input type="radio" class="custom-control-input" id="radio1" name="genero" required>
+            <label class="custom-control-label" for="Validation1" value="Hombre">Hombre</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="radio2" name="radio-stacked" required>
-            <label class="custom-control-label" for="Validation2">Mujer</label>
+            <input type="radio" class="custom-control-input" id="radio2" name="genero" required>
+            <label class="custom-control-label" for="Validation2" value = "Mujer">Mujer</label>
           </div>
           <div class="custom-control custom-radio mb-3">
-            <input type="radio" class="custom-control-input" id="radio3" name="radio-stacked" required>
-            <label class="custom-control-label" for="Validation3">Alien</label>
+            <input type="radio" class="custom-control-input" id="radio3" name="genero" required>
+            <label class="custom-control-label" for="Validation3" value = "Alien">Alien</label>
           </div>
+        </form>
         </div>
         <div class="mb-3">
-          <label class="form-label">Edad</label>
-          <input type="number" class="form-control" style="border-radius: 10px; width: 20%;" id="ExampleEdad"
-            aria-describedby="number">
+          <label class="form-label" >Edad</label>
+          <input type="number" class="form-control"  style="border-radius: 10px; width: 20%;" id="txtEdad" aria-describedby="number">
           <div class="form-text">Aqui ingrese su Edad</div>
         </div>
         <div class="mb-3">
-          <label class="form-label">Tratamientos</label>
-          <select style="border-radius: 10px; width: min-content;" class="form-select" id="inputGroupSelect02">
-            <option disabled="true" selected>Escoger...</option>
-            <option value="1">Estetica Dental</option>
-            <option value="2">Ortodoncia</option>
-            <option value="3">Endoncia</option>
-            <option value="4">Ferula Dental</option>
-            <option value="5">Blanqueamiento Dental</option>
-            <option value="6">Carillas Bucales de Porcelana</option>
-            <option value="7">Carillas Bucales de composite</option>
-            <option value="8">Implantes Dentales</option>
-          </select>
+          <label class="form-label" >Tratamientos</label>
+          <div class="input-group mb-3">
+            <select style="border-radius: 10px; width: auto;" class="custom-select" id="cmbTratamientos">
+              <option disabled="true" selected>Escoger...</option>
+              <option >Estetica Dental</option>
+              <option >Ortodoncia</option>
+              <option >Endoncia</option>
+              <option >Ferula Dental</option>
+              <option >Blanqueamiento Dental</option>
+              <option >Carillas Bucales de Porcelana</option>
+              <option >Carillas Bucales de composite</option>
+              <option >Implantes Dentales</option>
+            </select>
+          </div>
         </div>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email</label>
-          <input type="email" class="form-control" style="border-radius: 10px; width: 50%;" id="exampleInputEmail1"
-            aria-describedby="emailHelp">
+          <input type="email" class="form-control"  style="border-radius: 10px; width: 50%;" id="txtEmail" aria-describedby="emailHelp">
           <div id="emailHelp" class="form-text">Aqui ingrese su correo electronico</div>
         </div>
         <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <input type="checkbox" class="form-check-input" id="terminosycondiciones">
           <label class="form-check-label" for="exampleCheck1">Acepto Terminos Y Condiciones</label>
         </div>
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" class="btn btn-primary" id="btnEnviarDatos" onclick="sendDate()">
           Enviar</button>
+          <button type="submit" class="btn btn-warning" id="btnEditarDatos" onclick="actualizardatos()">
+           Editar </button>
       </form>
     </div>
     <br>
     <br>
+    <div id="cuadro" style="display: none">
+
+      <table class="table table-hover table-dark" id="tabladatos">
+           <tr><th>ID</th> <th>Nombre</th><th>Apellido</th><th>Tipo de Documento</th><th>Id Documento</th><th>Genero</th><th>Edad</th><th>Tratamientos</th><th>Email</th><th class="text-center">Opcion</th></tr>
+  
+   </table>
+  </div>
+ </div>
+    
+
+
+
   </div>
   <div style="background-color: #04009a" class="text-white">
     <div class="container-fluid">
@@ -252,5 +267,6 @@
     </div>
   </div>
 </body>
+<script src="../js/taller.js"></script>
 
 </html>
