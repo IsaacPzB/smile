@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/../../css/bootstrap.css" />
   <link rel="shortcut icon" href="img/../../img/logo.png" />
+  <script src="../js/bootstrap.bundle.min.js"></script>
   <title>Citas</title>
 </head>
 
@@ -84,29 +85,30 @@
       <form>
         <div class="mb-3">
           <label class="form-label">Nombre</label>
-          <input type="text" class="form-control" style="border-radius: 10px; width: 60%;" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+          <input type="text" class="form-control" style="border-radius: 10px; width: 60%;" aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm">
           <div class="form-text">Aqui ingrese su nombre</div>
         </div>
         <div class="mb-3">
           <label class="form-label">Apellidos</label>
-          <input type="text" class="form-control"  style="border-radius: 10px; width: 60%;" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+          <input type="text" class="form-control" style="border-radius: 10px; width: 60%;" aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm">
           <div class="form-text">Aqui ingrese sus apellidos</div>
         </div>
         <div class="mb-3">
           <label class="form-label">Tipo de documento de identidad</label>
-          <div class="input-group mb-3">
-            <select style="border-radius: 10px; width:auto;" class="custom-select" id="inputGroupSelect01">
-              <option selected>Cédula de Ciudadanía</option>
-              <option value="1">Terjeta de Identidad</option>
-              <option value="2">Cédula de Extranjería</option>
-              <option value="3">Pasaporte</option>
-              <option value="4">Tarjeta militar</option>
-            </select>
-          </div>
+          <select style="border-radius: 10px; width: min-content;" class="form-select" id="inputGroupSelect01">
+            <option selected>Cédula de Ciudadanía</option>
+            <option value="1">Terjeta de Identidad</option>
+            <option value="2">Cédula de Extranjería</option>
+            <option value="3">Pasaporte</option>
+            <option value="4">Tarjeta militar</option>
+          </select>
         </div>
         <div class="mb-3">
           <label class="form-label">Número de documento</label>
-          <input type="text" class="form-control"  style="border-radius: 10px; width: 40%;" id="ExampleNumber" aria-describedby="text">
+          <input type="text" class="form-control" style="border-radius: 10px; width: 40%;" id="ExampleNumber"
+            aria-describedby="text">
           <div class="form-text">Aqui ingrese su número de documento</div>
         </div>
 
@@ -127,28 +129,28 @@
         </div>
         <div class="mb-3">
           <label class="form-label">Edad</label>
-          <input type="number" class="form-control"  style="border-radius: 10px; width: 20%;" id="ExampleEdad" aria-describedby="number">
+          <input type="number" class="form-control" style="border-radius: 10px; width: 20%;" id="ExampleEdad"
+            aria-describedby="number">
           <div class="form-text">Aqui ingrese su Edad</div>
         </div>
         <div class="mb-3">
           <label class="form-label">Tratamientos</label>
-          <div class="input-group mb-3">
-            <select style="border-radius: 10px; width: auto;" class="custom-select" id="inputGroupSelect01">
-              <option disabled="true" selected>Escoger...</option>
-              <option value="1">Estetica Dental</option>
-              <option value="2">Ortodoncia</option>
-              <option value="3">Endoncia</option>
-              <option value="4">Ferula Dental</option>
-              <option value="5">Blanqueamiento Dental</option>
-              <option value="6">Carillas Bucales de Porcelana</option>
-              <option value="7">Carillas Bucales de composite</option>
-              <option value="8">Implantes Dentales</option>
-            </select>
-          </div>
+          <select style="border-radius: 10px; width: min-content;" class="form-select" id="inputGroupSelect02">
+            <option disabled="true" selected>Escoger...</option>
+            <option value="1">Estetica Dental</option>
+            <option value="2">Ortodoncia</option>
+            <option value="3">Endoncia</option>
+            <option value="4">Ferula Dental</option>
+            <option value="5">Blanqueamiento Dental</option>
+            <option value="6">Carillas Bucales de Porcelana</option>
+            <option value="7">Carillas Bucales de composite</option>
+            <option value="8">Implantes Dentales</option>
+          </select>
         </div>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email</label>
-          <input type="email" class="form-control"  style="border-radius: 10px; width: 50%;" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <input type="email" class="form-control" style="border-radius: 10px; width: 50%;" id="exampleInputEmail1"
+            aria-describedby="emailHelp">
           <div id="emailHelp" class="form-text">Aqui ingrese su correo electronico</div>
         </div>
         <div class="mb-3 form-check">
