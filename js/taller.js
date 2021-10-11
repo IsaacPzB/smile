@@ -9,7 +9,7 @@ function sendDate() {
   var Apellidos = document.getElementById("txtApellidos").value;
   var TipoDocumento = document.getElementById("cmbTipoDocumento").value;
   var IdDocumento = document.getElementById("txtid").value;
-
+  
   var Edad = document.getElementById("txtEdad").value;
   var Tratamientos = document.getElementById("cmbTratamientos").value;
   var Email = document.getElementById("txtEmail").value;
@@ -39,15 +39,12 @@ function sendDate() {
   } else {
     if (h == true) {
       h = "Hombre";
-      localStorage.setItem("Genero", h);
       infoForm["GENERO"] = h;
     } else if (m == true) {
       m = "Mujer";
-      localStorage.setItem("Genero", m);
       infoForm["GENERO"] = m;
     } else if (a == true) {
       a = "Alien";
-      localStorage.setItem("Genero", a);
       infoForm["GENERO"] = a;
     } else if (h == false) {
       alert("Debe seleccionar un genero");
@@ -101,6 +98,9 @@ function sendDate() {
     cell10.innerHTML = `<a class="btn btn-warning mx-2 " onClick="onEdit(this)">Edit</a>
      <a class= "btn btn-danger " onClick="onDelete(this)">Delete</a>`;
     document.getElementById("form").reset();
+   
+
+
 
     divtabla.style.display = "";
   }
@@ -186,3 +186,5 @@ function onDelete(td) {
     }
   }
 }
+
+

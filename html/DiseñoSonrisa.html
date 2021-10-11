@@ -225,7 +225,93 @@
         </table>
       </div>
     </div>
+<br>
+<br>
+
+<div>
+  <h1 class="display-5" style="text-align: center; color: #77acf1">
+    FORMULARIO DE SERVICIOS
+  </h1>
+
+</div>
+<br>
+
+
+<form id="form" autocomplete="off">
+  <div class="mb-3">
+     
+  <div class="mb-3">
+    <label class="form-label" >Servicios Disponibles</label>
+    <div class="input-group mb-3">
+      <select style="border-radius: 10px; width: auto;" class="custom-select" id="cmbServicios">
+        <option disabled selected>Escoger...</option>
+        <option >Estetica Dental</option>
+        <option >Ortodoncia</option>
+        <option >Endoncia</option>
+        <option >Ferula Dental</option>
+        <option >Blanqueamiento Dental</option>
+        <option >Carillas Bucales de Porcelana</option>
+        <option >Carillas Bucales de composite</option>
+        <option >Implantes Dentales</option>
+      </select>
+    </div>
   </div>
+
+  <div class="mb-3">
+    <label class="form-label" >Cuota Inicial</label>
+    <input type="number" class="form-control"  style="border-radius: 10px; width: 20%;" id="txtCuotaInicial" aria-describedby="number">
+    <div class="form-text">Aqui ingrese su Cuota Inicial</div>
+  </div>
+
+ <div class="mb-3">
+    <label class="form-label" >Metodos De Pago</label>
+    <div class="input-group mb-3">
+      <select style="border-radius: 10px; width: auto;" class="custom-select" id="cmbPago">
+        <option disabled selected>Escoger...</option>
+        <option >Efectivo</option>
+        <option >Tarjeta</option>
+      </select>
+    </div>
+  </div>
+  
+
+
+  <div class="mb-3">
+
+    <label class="form-label" >Fecha</label><br>
+    <input type="date" id="fecha" name="trip-start"
+    
+    min="2021-10-01" max="2022-01-01">
+    </div>
+
+ 
+
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="terminosycondiciones">
+      <label class="form-check-label" for="exampleCheck1">Acepto Terminos Y Condiciones</label>
+    </div>
+  </form>
+  </div>
+  <button type="submit" class="btn btn-primary" id="btnEnviarDatos" onclick="sendDate1()">
+    Enviar</button>
+    <button type="submit" class="btn btn-warning" id="btnEditarDatos" onclick="actualizar()">
+     Editar </button>
+</form>
+</div>
+<br>
+<br>
+<div id="cuadro" style="display: none">
+
+<table class="table table-hover table-dark" id="tabladatos">
+     <tr><th>ID</th> <th>Servicio</th><th>Metodo de Pago</th><th>Cuota Inicial</th><th>Fecha</th><th class="text-center">Opcion</th></tr>
+
+</table>
+</div>
+
+
+</div>
+
+<br>
 
   <div style="background-color: #04009a" class="text-white">
     <div class="container-fluid">
@@ -315,5 +401,6 @@
     </div>
   </div>
 </body>
+<script src="../js/taller1.js"> </script>
 
 </html>
