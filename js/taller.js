@@ -293,7 +293,35 @@ function onEdit(td) {
   document.getElementById("cmbTipoDocumento").value =
     selectedRow.cells[3].innerHTML;
   document.getElementById("txtid").value = selectedRow.cells[4].innerHTML;
-  document.getElementById("Genero").setItems = selectedRow.cells[5].innerHTML;
+
+
+
+  var h = document.getElementById("radio1").checked;
+  var m = document.getElementById("radio2").checked;
+  var a = document.getElementById("radio3").checked;
+  var Genero = "";
+    if (h == true) {
+      h = "Hombre";
+      Genero = "Hombre"
+      infoForm["GENERO"] = h;
+    } else if (m == true) {
+      m = "Mujer";
+      Genero = "Mujer"
+      infoForm["GENERO"] = m;
+    } else if (a == true) {
+      a = "Alien";
+      Genero = "Alien"
+      infoForm["GENERO"] = a;
+    } 
+ // document.getElementById("Genero").value = selectedRow.cells[5].innerHTML;
+  
+  
+  
+  
+  
+  
+  
+  
   document.getElementById("txtEdad").value = selectedRow.cells[6].innerHTML;
   document.getElementById("cmbTratamientos").value =
     selectedRow.cells[7].innerHTML;
