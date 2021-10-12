@@ -52,15 +52,15 @@ function sendDate() {
     var Genero = "";
     if (h == true) {
       h = "Hombre";
-      Genero = "Hombre"
+      Genero = "Hombre";
       infoForm["GENERO"] = h;
     } else if (m == true) {
       m = "Mujer";
-      Genero = "Mujer"
+      Genero = "Mujer";
       infoForm["GENERO"] = m;
     } else if (a == true) {
       a = "Alien";
-      Genero = "Alien"
+      Genero = "Alien";
       infoForm["GENERO"] = a;
     } else if (h == false) {
       alert("Debe seleccionar un genero");
@@ -118,22 +118,26 @@ function sendDate() {
 
     mistorage = window.localStorage;
     let Paciente = {
-      Nombre, Apellidos, TipoDocumento, IdDocumento, Genero, Edad, Tratamientos, Email
+      Nombre,
+      Apellidos,
+      TipoDocumento,
+      IdDocumento,
+      Genero,
+      Edad,
+      Tratamientos,
+      Email,
     };
     if (mistorage.getItem("Pacientes") === null) {
       let Pac = [];
       Pac.push(Paciente);
       mistorage.setItem("Pacientes", JSON.stringify(Pac));
-      
     } else {
       let Pac = JSON.parse(localStorage.getItem("Pacientes"));
       Pac.push(Paciente);
       mistorage.setItem("Pacientes", JSON.stringify(Pac));
     }
     document.getElementById("form").reset();
-
-
-  } 
+  }
 }
 
 function sendDate2() {
@@ -144,9 +148,7 @@ function sendDate2() {
   var Edad2 = document.getElementById("ExampleEdad").value;
   var Email2 = document.getElementById("exampleInputEmail1").value;
   var Calificacion2 = document.getElementById("customRange2").value;
-  var TerminosCondiciones2 = document.getElementById(
-    "exampleCheck1"
-  ).checked;
+  var TerminosCondiciones2 = document.getElementById("exampleCheck1").checked;
 
   var correcto = true;
   if (Nombre2 == "") {
@@ -162,7 +164,6 @@ function sendDate2() {
   } else if (TerminosCondiciones2 == false) {
     correcto = false;
   } else if (correcto == true) {
-
     infoForm2["ID"] = ii++;
     infoForm2["NOMBRE"] = Nombre2;
     infoForm2["TELEFONO"] = Telefono2;
@@ -204,13 +205,17 @@ function sendDate2() {
 
     mistorage = window.localStorage;
     let Usuario = {
-      Nombre2, Telefono2, Edad2, IdDocumento2, Email2, Calificacion2
+      Nombre2,
+      Telefono2,
+      Edad2,
+      IdDocumento2,
+      Email2,
+      Calificacion2,
     };
     if (mistorage.getItem("Clientes") === null) {
       let Usuarios = [];
       Usuarios.push(Usuario);
       mistorage.setItem("Clientes", JSON.stringify(Usuarios));
-
     } else {
       let Usuarios = JSON.parse(localStorage.getItem("Clientes"));
       Usuarios.push(Usuario);
@@ -225,13 +230,17 @@ function sendDate3() {
   var MetodosPago = document.getElementById("cmbPago").value;
   var CuotaInicial = document.getElementById("txtCuotaInicial").value;
   var fecha = document.getElementById("fecha").value;
-  var TerminosCondiciones3 = document.getElementById("terminosycondiciones3").checked;
+  var TerminosCondiciones3 = document.getElementById(
+    "terminosycondiciones3"
+  ).checked;
 
-  if (Servicio == "Escoger..." ||
+  if (
+    Servicio == "Escoger..." ||
     CuotaInicial == "" ||
     MetodosPago == "Escoger..." ||
     TerminosCondiciones3 == false ||
-    fecha == "") {
+    fecha == ""
+  ) {
     alert("Debe Llenar Todos Los Campos");
   } else {
     infoForm3["ID"] = iii++;
@@ -266,13 +275,15 @@ function sendDate3() {
 
     mistorage = window.localStorage;
     let tratamiento = {
-      Servicio, MetodosPago, CuotaInicial, fecha
+      Servicio,
+      MetodosPago,
+      CuotaInicial,
+      fecha,
     };
     if (mistorage.getItem("Servicios") === null) {
       let serv = [];
       serv.push(tratamiento);
       mistorage.setItem("Servicios", JSON.stringify(serv));
-
     } else {
       let serv = JSON.parse(localStorage.getItem("Servicios"));
       serv.push(tratamiento);
@@ -281,7 +292,6 @@ function sendDate3() {
     document.getElementById("form3").reset();
   }
 }
-
 
 function onEdit(td) {
   botoneditar.disabled = false;
@@ -294,34 +304,24 @@ function onEdit(td) {
     selectedRow.cells[3].innerHTML;
   document.getElementById("txtid").value = selectedRow.cells[4].innerHTML;
 
-
-
   var h = document.getElementById("radio1").checked;
   var m = document.getElementById("radio2").checked;
   var a = document.getElementById("radio3").checked;
   var Genero = "";
-    if (h == true) {
-      h = "Hombre";
-      Genero = "Hombre"
-      infoForm["GENERO"] = h;
-    } else if (m == true) {
-      m = "Mujer";
-      Genero = "Mujer"
-      infoForm["GENERO"] = m;
-    } else if (a == true) {
-      a = "Alien";
-      Genero = "Alien"
-      infoForm["GENERO"] = a;
-    } 
- // document.getElementById("Genero").value = selectedRow.cells[5].innerHTML;
-  
-  
-  
-  
-  
-  
-  
-  
+  if (h == true) {
+    h = "Hombre";
+    Genero = "Hombre";
+    infoForm["GENERO"] = h;
+  } else if (m == true) {
+    m = "Mujer";
+    Genero = "Mujer";
+    infoForm["GENERO"] = m;
+  } else if (a == true) {
+    a = "Alien";
+    Genero = "Alien";
+    infoForm["GENERO"] = a;
+  }
+
   document.getElementById("txtEdad").value = selectedRow.cells[6].innerHTML;
   document.getElementById("cmbTratamientos").value =
     selectedRow.cells[7].innerHTML;
@@ -332,21 +332,27 @@ function onEdit2(td2) {
   botoneditar2.disabled = false;
   botonenviar2.disabled = true;
   selectedRow = td2.parentElement.parentElement;
-  document.getElementById("ExampleNombre").value = selectedRow.cells[1].innerHTML;
-  document.getElementById("ExampleNumber").value = selectedRow.cells[2].innerHTML;
+  document.getElementById("ExampleNombre").value =
+    selectedRow.cells[1].innerHTML;
+  document.getElementById("ExampleNumber").value =
+    selectedRow.cells[2].innerHTML;
   document.getElementById("ExampleId").value = selectedRow.cells[3].innerHTML;
   document.getElementById("ExampleEdad").value = selectedRow.cells[4].innerHTML;
-  document.getElementById("exampleInputEmail1").value = selectedRow.cells[5].innerHTML;
-  document.getElementById("customRange2").value = selectedRow.cells[6].innerHTML;
+  document.getElementById("exampleInputEmail1").value =
+    selectedRow.cells[5].innerHTML;
+  document.getElementById("customRange2").value =
+    selectedRow.cells[6].innerHTML;
 }
 
 function onEdit3(td3) {
   botoneditar3.disabled = false;
   botonenviar3.disabled = true;
   selectedRow = td3.parentElement.parentElement;
-  document.getElementById("cmbServicios").value = selectedRow.cells[1].innerHTML;
+  document.getElementById("cmbServicios").value =
+    selectedRow.cells[1].innerHTML;
   document.getElementById("cmbPago").value = selectedRow.cells[2].innerHTML;
-  document.getElementById("txtCuotaInicial").value = selectedRow.cells[3].innerHTML;
+  document.getElementById("txtCuotaInicial").value =
+    selectedRow.cells[3].innerHTML;
   document.getElementById("fecha").setItems = selectedRow.cells[4].innerHTML;
 }
 
@@ -409,8 +415,7 @@ function actualizardatos2() {
   Edad2 = document.getElementById("ExampleEdad").value;
   Email2 = document.getElementById("exampleInputEmail1").value;
   Calificacion2 = document.getElementById("customRange2").value;
-  TerminosCondiciones2 = document.getElementById(
-    "exampleCheck1").checked;
+  TerminosCondiciones2 = document.getElementById("exampleCheck1").checked;
   var correcto = true;
   if (Nombre2 == "") {
     correcto = false;
@@ -425,7 +430,6 @@ function actualizardatos2() {
   } else if (TerminosCondiciones2 == false) {
     correcto = false;
   } else if (correcto == true) {
-
     infoForm2["NOMBRE"] = Nombre2;
     infoForm2["TELEFONO"] = Telefono2;
     infoForm2["IDDOCUMENTO"] = IdDocumento2;
@@ -452,7 +456,9 @@ function actualizar() {
   var MetodosPago = document.getElementById("cmbPago").value;
   var CuotaInicial = document.getElementById("txtCuotaInicial").value;
   var fecha = document.getElementById("fecha").value;
-  var TerminosCondiciones3 = document.getElementById("terminosycondiciones3").checked;
+  var TerminosCondiciones3 = document.getElementById(
+    "terminosycondiciones3"
+  ).checked;
 
   if (
     Servicio == "Escoger..." ||
@@ -519,17 +525,22 @@ function onDelete3(td3) {
   }
 }
 
-
 function local1() {
   mistorage = window.localStorage;
   let Paciente = {
-    Nombre, Apellidos, TipoDocumento, IdDocumento, Genero, Edad, Tratamientos, Email
+    Nombre,
+    Apellidos,
+    TipoDocumento,
+    IdDocumento,
+    Genero,
+    Edad,
+    Tratamientos,
+    Email,
   };
   if (mistorage.getItem("Pacientes") === null) {
     let Pac = [];
     Pac.push(Paciente);
     mistorage.setItem("Pacientes", JSON.stringify(Pac));
-
   } else {
     let Pac = JSON.parse(localStorage.getItem("Pacientes"));
     Pac.push(Paciente);
@@ -537,6 +548,3 @@ function local1() {
   }
   document.getElementById("form").reset();
 }
-
-
-
