@@ -114,8 +114,8 @@ function sendDate() {
     cell10.innerHTML = `<a class="btn btn-warning mx-2 " onClick="onEdit(this)">Edit</a>
      <a class= "btn btn-danger " onClick="onDelete(this)">Delete</a>`;
     document.getElementById("form").reset();
-
     divtabla.style.display = "";
+
     mistorage = window.localStorage;
     let Paciente = {
       Nombre, Apellidos, TipoDocumento, IdDocumento, Genero, Edad, Tratamientos, Email
@@ -124,14 +124,16 @@ function sendDate() {
       let Pac = [];
       Pac.push(Paciente);
       mistorage.setItem("Pacientes", JSON.stringify(Pac));
-
+      
     } else {
       let Pac = JSON.parse(localStorage.getItem("Pacientes"));
       Pac.push(Paciente);
       mistorage.setItem("Pacientes", JSON.stringify(Pac));
     }
     document.getElementById("form").reset();
-  }
+
+
+  } 
 }
 
 function sendDate2() {
@@ -489,6 +491,24 @@ function onDelete3(td3) {
   }
 }
 
+
+function local1() {
+  mistorage = window.localStorage;
+  let Paciente = {
+    Nombre, Apellidos, TipoDocumento, IdDocumento, Genero, Edad, Tratamientos, Email
+  };
+  if (mistorage.getItem("Pacientes") === null) {
+    let Pac = [];
+    Pac.push(Paciente);
+    mistorage.setItem("Pacientes", JSON.stringify(Pac));
+
+  } else {
+    let Pac = JSON.parse(localStorage.getItem("Pacientes"));
+    Pac.push(Paciente);
+    mistorage.setItem("Pacientes", JSON.stringify(Pac));
+  }
+  document.getElementById("form").reset();
+}
 
 
 
