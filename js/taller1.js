@@ -1,6 +1,6 @@
 var divtabla = document.getElementById("cuadro");
 var i = 1;
-var botonenviar = document.getElementById("bntEnviarDatos");
+var botonenviar = document.getElementById("btnEnviarDatos");
 var botoneditar = document.getElementById("btnEditarDatos");
 var infoForm = {};
 
@@ -22,8 +22,9 @@ function sendDate1() {
   ) {
     alert("Debe Llenar Todos Los Campos");
   } else {
-    infoForm["ID"] = i++;
-    infoForm["SERVICIO"] = Servicio;
+
+    infoForm["Id"] = i++;
+    infoForm["Servicio"] = Servicio;
     infoForm["CUOTAINICIAL"] = CuotaInicial;
     infoForm["METODODEPAGO"] = MetodosPago;
     infoForm["FECHASERVICIO"] = fecha;
@@ -33,9 +34,10 @@ function sendDate1() {
 
     cell1 = filanueva.insertCell(0);
     cell1.innerHTML = infoForm.ID;
+    
 
     cell2 = filanueva.insertCell(1);
-    cell2.innerHTML = infoForm.SERVICIO;
+    cell2.innerHTML = infoForm.Servicio;
 
     cell3 = filanueva.insertCell(2);
     cell3.innerHTML = infoForm.METODODEPAGO;
@@ -58,12 +60,10 @@ function onEdit(td) {
   botoneditar.disabled = false;
   botonenviar.disabled = true;
   selectedRow = td.parentElement.parentElement;
-  document.getElementById("cmbServicios").value =
-    selectedRow.Cells[1].innerHTML;
+  document.getElementById("cmbServicios").value =selectedRow.Cells[1].innerHTML;
   document.getElementById("cmbPago").value = selectedRow.Cells[2].innerHTML;
-  document.getElementById("txtCuotaInicial").value =
-    selectedRow.Cells[3].innerHTML;
-  document.getElementById("fecha").setItems = selectedRow.Cells[4].innerHTML;
+  document.getElementById("txtCuotaInicial").value =  selectedRow.Cells[3].innerHTML;
+  document.getElementById("fecha").value = selectedRow.Cells[4].innerHTML;
 }
 
 function actualizar() {
@@ -85,12 +85,13 @@ function actualizar() {
     alert("Debe Llenar Todos Los Campos");
   } else {
     infoForm["ID"] = i++;
-    infoForm["SERVICIO"] = Servicio;
+    infoForm["SERVICIOS"] = Servicio;
     infoForm["CUOTAINICIAL"] = CuotaInicial;
     infoForm["METODODEPAGO"] = MetodosPago;
     infoForm["FECHASERVICIO"] = fecha;
 
-    selectedRow.Cells[1].innerHTML = infoForm.SERVICIO;
+    selectedRow.cells[1].innerHTML = infoForm.SERVICIOS;
+    
     selectedRow.Cells[2].innerHTML = infoForm.CUOTAINICIAL;
     selectedRow.Cells[3].innerHTML = infoForm.METODODEPAGO;
     selectedRow.Cells[4].innerHTML = infoForm.FECHASERVICIO;

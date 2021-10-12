@@ -59,7 +59,6 @@ function sendDate() {
     infoForm["APELLIDOS"] = Apellidos;
     infoForm["TIPODOCUEMNTO"] = TipoDocumento;
     infoForm["IDDOCUMENTO"] = IdDocumento;
-
     infoForm["EDAD"] = Edad;
     infoForm["TRATAMIENTOS"] = Tratamientos;
     infoForm["EMAIL"] = Email;
