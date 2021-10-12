@@ -116,23 +116,6 @@
         </div>
 
         <div class="mb-3">
-          <form id="radiomenu" name="genero">
-            <label class="form-label">Genero</label>
-            <div class="custom-control custom-radio">
-              <input type="radio" class="custom-control-input" id="radio1" name="genero" required>
-              <label class="custom-control-label" for="radio1" value="Hombre">Hombre</label>
-            </div>
-            <div class="custom-control custom-radio">
-              <input type="radio" class="custom-control-input" id="radio2" name="genero" required>
-              <label class="custom-control-label" for="radio2" value="Mujer">Mujer</label>
-            </div>
-            <div class="custom-control custom-radio mb-3">
-              <input type="radio" class="custom-control-input" id="radio3" name="genero" required>
-              <label class="custom-control-label" for="radio3" value="Alien">Alien</label>
-            </div>
-          </form>
-        </div>
-        <div class="mb-3">
           <label class="form-label">Edad</label>
           <input type="number" class="form-control" style="border-radius: 10px; width: 20%;" id="txtEdad"
             aria-describedby="number">
@@ -154,21 +137,41 @@
             </select>
           </div>
         </div>
+
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email</label>
           <input type="email" class="form-control" style="border-radius: 10px; width: 50%;" id="txtEmail"
             aria-describedby="emailHelp">
           <div id="emailHelp" class="form-text">Aqui ingrese su correo electronico</div>
         </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="terminosycondiciones">
-          <label class="form-check-label" for="terminosycondiciones">Acepto Terminos Y Condiciones</label>
+
+        <div class="mb-3">
+          <form id="radiomenu" name="genero">
+            <label class="form-label">Genero</label>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="radio1" name="genero" required>
+              <label class="custom-control-label" for="radio1" value="Hombre">Hombre</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="radio2" name="genero" required>
+              <label class="custom-control-label" for="radio2" value="Mujer">Mujer</label>
+            </div>
+            <div class="custom-control custom-radio mb-3">
+              <input type="radio" class="custom-control-input" id="radio3" name="genero" required>
+              <label class="custom-control-label" for="radio3" value="Alien">Alien</label>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="terminosycondiciones">
+              <label class="form-check-label" for="terminosycondiciones">Acepto Terminos Y Condiciones</label>
+            </div>
+          </form>
         </div>
-        <button type="submit" class="btn btn-primary" id="btnEnviarDatos" onclick="sendDate()">
-          Enviar</button>
-        <button type="submit" class="btn btn-warning" id="btnEditarDatos" disabled onclick="actualizardatos()">
-          Editar </button>
+
       </form>
+      <button type="submit" class="btn btn-primary" id="btnEnviarDatos" onclick="sendDate()">
+        Enviar</button>
+      <button type="submit" class="btn btn-warning" id="btnEditarDatos" disabled onclick="actualizardatos()">
+        Editar </button>
     </div>
     <br>
     <br>
