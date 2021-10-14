@@ -104,7 +104,7 @@
           <div class="card mb-3">
             <img src="html/../../img/EsteticaDental.jpg" height="200px" class="card-body" alt="..."
               style="background-color: #77acf1" />
-            <div class="card-body" style="background-color: #77acf1">
+            <div class="card-body" style="background-color: #77acf1; height: max-content;">
               <h5 class="card-title">Estetica Dental</h5>
               <p class="card-text" style="text-align: justify;">
                 Una sonrisa bonita es un factor importante para sentirnos a
@@ -112,7 +112,7 @@
                 encías sanos nos ayuda a sonreír sin ninguna clase de temores ni
                 complejos.Pero,¿qué tratamientos estéticos pueden perfeccionar
                 nuestra sonrisa y convertirla en una sonrisa de cine?
-                <br><br>
+
               </p>
               <p class="card-text">
                 <small class="text-muted">Last updated 3 mins ago</small>
@@ -122,15 +122,16 @@
         </div>
         <div class="col-lg-4 col-sm-4 col-md-4">
           <div class="card mb-3">
-            <img src="html/../../img/Endoncia.jpg"  class="card-body" alt="..." height="200px" style="background-color: #77acf1" />
-            <div class="card-body" style="background-color: #77acf1">
+            <img src="html/../../img/Endoncia.jpg" class="card-body" alt="..." height="200px"
+              style="background-color: #77acf1" />
+            <div class="card-body" style="background-color: #77acf1;">
               <h5 class="card-title">Endocia</h5>
               <p class="card-text" style="text-align: justify;">
                 El tratamiento se realiza bajo anestesia local, por lo que no
                 resulta doloroso. Si es verdad que, una vez finalizado el efecto
                 de la anestesia, el paciente podría sentir durante los
                 siguientes días alguna molestia a la hora de masticar.
-                <br><br><br><br>
+                <br><br><br>
               </p>
               <p class="card-text">
                 <small class="text-muted">Last updated 3 mins ago</small>
@@ -140,7 +141,8 @@
         </div>
         <div class="col-lg-4 col-sm-4 col-md-4">
           <div class="card mb-3">
-            <img style="background-color: #77acf1" src="html/../../img/Ortodoncia.jpg" height="200px" class="card-body" alt="..." />
+            <img style="background-color: #77acf1" src="html/../../img/Ortodoncia.jpg" height="200px" class="card-body"
+              alt="..." />
             <div class="card-body" style="background-color: #77acf1">
               <h5 class="card-title">Ortodoncia</h5>
               <p class="card-text" style="text-align: justify;">
@@ -248,70 +250,70 @@
 
 
   <div class="container">
-    <div class="row">   
-       <div class="col-lg-6 col-sm-6 col-md-6">
-      <form id="form3" onsubmit="return false" autocomplete="off">
-        <div class="mb-3">
-          <label class="form-label">Servicios Disponibles</label>
+    <div class="row">
+      <div class="col-lg-6 col-sm-6 col-md-6">
+        <form id="form3" onsubmit="return false" autocomplete="off">
           <div class="mb-3">
-            <select style="border-radius: 10px; width: min-content;" class="form-select" id="cmbServicios">
-              <option disabled selected>Escoger...</option>
-              <option>Estetica Dental</option>
-              <option>Ortodoncia</option>
-              <option>Endoncia</option>
-              <option>Ferula Dental</option>
-              <option>Blanqueamiento Dental</option>
-              <option>Carillas Bucales de Porcelana</option>
-              <option>Carillas Bucales de composite</option>
-              <option>Implantes Dentales</option>
-            </select>
+            <label class="form-label">Servicios Disponibles</label>
+            <div class="mb-3">
+              <select style="border-radius: 10px; width: min-content;" class="form-select" id="cmbServicios">
+                <option disabled selected>Escoger...</option>
+                <option>Estetica Dental</option>
+                <option>Ortodoncia</option>
+                <option>Endoncia</option>
+                <option>Ferula Dental</option>
+                <option>Blanqueamiento Dental</option>
+                <option>Carillas Bucales de Porcelana</option>
+                <option>Carillas Bucales de composite</option>
+                <option>Implantes Dentales</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Cuota Inicial</label>
-          <input type="number" class="form-control" style="border-radius: 10px; width: 20%;" id="txtCuotaInicial"
-            aria-describedby="number">
-          <div class="form-text">Aqui ingrese su Cuota Inicial</div>
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Metodos De Pago</label>
           <div class="mb-3">
-            <select style="border-radius: 10px; width: min-content;" class="form-select" id="cmbPago">
-              <option disabled selected>Escoger...</option>
-              <option>Efectivo</option>
-              <option>Tarjeta</option>
-            </select>
+            <label class="form-label">Cuota Inicial</label>
+            <input type="number" class="form-control" style="border-radius: 10px; width: 20%;" id="txtCuotaInicial"
+              aria-describedby="number">
+            <div class="form-text">Aqui ingrese su Cuota Inicial</div>
           </div>
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Fecha</label><br>
-          <input class="form-control" type="date" id="fecha" name="trip-start"
-            style="border-radius: 10px; width: min-content;" min="2021-10-01" max="2022-01-01">
-        </div>
+          <div class="mb-3">
+            <label class="form-label">Metodos De Pago</label>
+            <div class="mb-3">
+              <select style="border-radius: 10px; width: min-content;" class="form-select" id="cmbPago">
+                <option disabled selected>Escoger...</option>
+                <option>Efectivo</option>
+                <option>Tarjeta</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Fecha</label><br>
+            <input class="form-control" type="date" id="fecha" name="trip-start"
+              style="border-radius: 10px; width: min-content;" min="2021-10-01" max="2022-01-01">
+          </div>
 
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="terminosycondiciones3">
-          <label class="form-check-label" for="terminosycondiciones3">Acepto Terminos Y Condiciones</label>
-        </div>
-        <button type="submit" class="btn btn-primary" id="btnEnviarDatos3" onclick="sendDate3()">
-          Enviar</button>
-        <button type="submit" class="btn btn-warning" disabled id="btnEditarDatos3" onclick="actualizar()">
-          Editar </button>
-      </form>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="terminosycondiciones3">
+            <label class="form-check-label" for="terminosycondiciones3">Acepto Terminos Y Condiciones</label>
+          </div>
+          <button type="submit" class="btn btn-primary" id="btnEnviarDatos3" onclick="crear()">
+            Enviar</button>
+          <button type="submit" class="btn btn-warning" disabled id="btnEditarDatos3" onclick="actualizar()">
+            Editar </button>
+        </form>
+      </div>
+      <div class="col-lg-6 col-sm-6 col-md-6">
+        <br>
+        <br>
+        <figure class="figure">
+          <img src="../img/ServiciosOdontologicos.jpg" class="img-fluid" alt="..." style="border-radius: 16%;">
+          <figcaption class="figure-caption" style="text-align: center;"> Servicios 100% Garantizados.</figcaption>
+        </figure>
+      </div>
     </div>
-    <div class="col-lg-6 col-sm-6 col-md-6">
-<br>
-<br>
-      <figure class="figure">        
-        <img src="../img/ServiciosOdontologicos.jpg" class="img-fluid" alt="..." style="border-radius: 16%;">
-        <figcaption class="figure-caption" style="text-align: center;"> Servicios 100% Garantizados.</figcaption>
-      </figure>
-    </div>
-  </div>
     <br>
-    <div    id="cuadro3" style="display: none;">
-      <table class="table table-hover table-dark" id="tabladatos3" >
-      
+    <div id="cuadro3" style="display: none;">
+      <table class="table table-hover table-dark" id="tabladatos3">
+
         <tr>
           <th>ID</th>
           <th>Servicio</th>
@@ -407,17 +409,16 @@
         </div>
       </div>
     </div>
-
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12">
-          <div style="text-align: center">
-            ©2021 SMILECENTER. Derechos Reservados
-          </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div style="text-align: center">
+          ©2021 SMILECENTER. Derechos Reservados
         </div>
       </div>
     </div>
+  </div>
 </body>
 <script src="../js/taller.js"></script>
 
